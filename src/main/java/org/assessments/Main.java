@@ -1,5 +1,7 @@
 package org.assessments;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -13,7 +15,12 @@ public class Main {
         System.out.println(calculator.getNullVotesPercentage());
 
         System.out.println("2) Bubble Sort");
-
+        int[] vector = {0, 12, 2, 3, 10};
+        System.out.println("Before:");
+        Arrays.stream(vector).forEach(num -> System.out.println(num + " "));
+        BubbleSort.sort(vector);
+        System.out.println("After:");
+        Arrays.stream(vector).forEach(num -> System.out.println(num + " "));
         System.out.println("3) Factorial");
         System.out.printf("5 Factorial: %d%n", Factorial.calculate(5));
 
